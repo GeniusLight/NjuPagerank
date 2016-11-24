@@ -43,12 +43,12 @@ def iteration(pi0, H, alpha, epsilon): #进行迭代计算权值
 	return pi
 
 
-file = 'class.xlsx'
-OffsetRow = 2
-OffsetCol = 2
+file = 'www1.csv'
+OffsetRow = 1
+OffsetCol = 1
 
 ReadMatrix = InputData.InputMatrix()
-array = ReadMatrix.ReadExcle(file, OffsetRow, OffsetCol)
+array = ReadMatrix.ReadCsv(file, OffsetRow, OffsetCol)
 
 n = array.shape[1]
 pi0 = ones((1, n))
@@ -56,3 +56,5 @@ alpha = 0.85
 epsilon = 1e-5
 pi = iteration(pi0, array, alpha, epsilon)
 print pi
+print max(max(pi))
+
