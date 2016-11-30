@@ -1,9 +1,7 @@
 # -*- coding:utf-8 -*-
 import xlrd
 from numpy import *
-from numpy.linalg import *
 import csv
-
 
 class InputMatrix(object):
     def ReadExcle(self, file, OffsetRow, OffsetCol):
@@ -28,7 +26,6 @@ class InputMatrix(object):
         array_i = 0
         array_j = 0 #插入数组中的位置
         num = 0 #开辟数组大小
-        # UrlList = []
         watcher = 0
         for row in CsvReader:
             num += 1
@@ -57,3 +54,14 @@ class InputMatrix(object):
                 OffSetRowShaw -= 1
 
         return array
+
+
+class InputUrl(object):
+    def ReadUrl(self,file):
+        CsvFile = open(file, 'rb')
+        CsvReader = csv.reader(CsvFile)
+        list = []
+        for row in CsvReader:
+            list.append(row[1])
+
+        return list
