@@ -1,4 +1,4 @@
 # NjuPagerank
-计算南大网站的谷歌矩阵
+NjuSearch2.0的第一部分，计算南大网站的谷歌矩阵
 从excle中读取各个网页的邻接关系，并且通过Pagerank算法计算各个网站的相对重要性
 其中classs2.xlsx和test.py只做简单的测试
